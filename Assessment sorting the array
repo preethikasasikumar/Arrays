@@ -9,22 +9,22 @@ public class Main {
         int rows = array.length;
         int cols = array[0].length;
         
-        for (int i = 0; i < rows; i++) {
-            for (int j = 0; j < cols; j++) {
-                for (int k = 0; k < rows; k++) {
-                    for (int l = 0; l < cols; l++) {
-                        if (array[i][j] < array[k][l]) {
+        for (int i=0; i<rows; i++) {
+            for (int j=0; j<cols; j++) {
+                for (int x=0; x< rows; x++) {
+                    for (int y= 0; y<cols; y++) {
+                        if (array[i][j] < array[x][y]) {
                             int temp = array[i][j];
-                            array[i][j] = array[k][l];
-                            array[k][l] = temp;
+                            array[i][j] = array[x][y];
+                            array[x][y] = temp;
                         }
                     }
                 }
             }
         }
         
-        for (int i = 0; i < rows; i++) {
-            for (int j = 0; j < cols; j++) {
+        for (int i=0; i<rows; i++) {
+            for (int j=0; j<cols; j++) {
                 System.out.print(array[i][j] + " ");
             }
             System.out.println();
